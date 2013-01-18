@@ -1,14 +1,14 @@
-package net.minecraft.src;
+ï»¿package net.minecraft.src;
 
 import org.lwjgl.input.Mouse;
 
 public class GCF_GuiControls extends GuiControls {
 
     protected GuiScreen parentScreen;
-	// eƒNƒ‰ƒX‚ÅprivateéŒ¾‚³‚ê‚Ä‚¢‚é•”•ª‚É‚Â‚¢‚Ä‘‚«’¼‚µ‚Ä‚¢‚éB
+	// è¦ªã‚¯ãƒ©ã‚¹ã§privateå®£è¨€ã•ã‚Œã¦ã„ã‚‹éƒ¨åˆ†ã«ã¤ã„ã¦æ›¸ãç›´ã—ã¦ã„ã‚‹ã€‚
     protected GameSettings options;
     protected int buttonId;
-    // ƒXƒNƒ[ƒ‹—p
+    // ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ç”¨
     protected float amountScrolled;
     protected float deltascrolled;
    
@@ -30,7 +30,7 @@ public class GCF_GuiControls extends GuiControls {
     @Override
     protected void actionPerformed(GuiButton guibutton) {
         if (guibutton.id != 200) {
-        	// ButtonID‚ğƒQƒbƒg
+        	// ButtonIDã‚’ã‚²ãƒƒãƒˆ
         	buttonId = guibutton.id;
         }
         super.actionPerformed(guibutton);
@@ -54,7 +54,7 @@ public class GCF_GuiControls extends GuiControls {
 
     @Override
     public void drawScreen(int i, int j, float f) {
-    	// •`‰æŠÖŒW‚ğ‘S•”ã‘‚«
+    	// æç”»é–¢ä¿‚ã‚’å…¨éƒ¨ä¸Šæ›¸ã
     	bindAmountScrolled();
     	
         drawDefaultBackground();
@@ -90,7 +90,7 @@ public class GCF_GuiControls extends GuiControls {
     @Override
     public void handleMouseInput() {
     	super.handleMouseInput();
-    	// ƒzƒC[ƒ‹‚ÌŠl“¾
+    	// ãƒ›ã‚¤ãƒ¼ãƒ«ã®ç²å¾—
         int i = Mouse.getEventDWheel();
         if (i != 0) {
 			deltascrolled -= (float)i * 0.25F;
@@ -98,7 +98,7 @@ public class GCF_GuiControls extends GuiControls {
     }
 
     private void bindAmountScrolled() {
-    	// ƒXƒNƒ[ƒ‹”ÍˆÍ‚Ì§ŒÀ
+    	// ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ç¯„å›²ã®åˆ¶é™
         amountScrolled += deltascrolled;
         deltascrolled = 0F;
 
