@@ -1,4 +1,4 @@
-ï»¿package net.minecraft.src;
+package net.minecraft.src;
 
 import net.minecraft.client.Minecraft;
 
@@ -16,7 +16,7 @@ public class mod_GCF_GuiControlsFix extends BaseMod {
 
 	@Override
 	public void load() {
-		// Forgeã®æ™‚ã¯è¦ã‚‰ãªã„
+		// Forge‚Ì‚Í—v‚ç‚È‚¢
 		if (ModLoader.isModLoaded("Forge")) {
 			ModLoader.getLogger().fine("Since Forge was found, it is not used.");
 		} else {
@@ -26,9 +26,9 @@ public class mod_GCF_GuiControlsFix extends BaseMod {
 
 	@Override
 	public boolean onTickInGUI(float f, Minecraft minecraft, GuiScreen guiscreen) {
-		// 1.4.2ã§ã¯ã‚²ãƒ¼ãƒ é–‹å§‹ã—ã¦ã„ãªã„ã¨å‘¼ã°ã‚Œãªã„æ¨¡æ§˜
+		// 1.4.2‚Å‚ÍƒQ[ƒ€ŠJn‚µ‚Ä‚¢‚È‚¢‚ÆŒÄ‚Î‚ê‚È‚¢–Í—l
 		if (guiscreen != null && guiscreen.getClass().isAssignableFrom(GuiControls.class)) {
-			// GuiControlsã‚’é–‹ã„ãŸã‚‰Fixã§ä¹—ã£å–ã‚‹
+			// GuiControls‚ğŠJ‚¢‚½‚çFix‚Åæ‚Áæ‚é
 			System.out.println("Replace GuiControls.");
 			try {
 				GuiScreen guiscreen1 = (GuiScreen)ModLoader.getPrivateValue(GuiControls.class, (GuiControls)guiscreen, 0);
