@@ -1,5 +1,8 @@
 package net.minecraft.src;
 
+import java.util.Map;
+import java.util.Map.Entry;
+
 import org.lwjgl.input.Mouse;
 
 public class GCF_GuiControls extends GuiControls {
@@ -62,8 +65,7 @@ public class GCF_GuiControls extends GuiControls {
 		for (int l = 0; l < options.keyBindings.length; l++) {
 			boolean flag = false;
 			for (int i1 = 0; i1 < options.keyBindings.length; i1++) {
-				if (i1 != l
-						&& options.keyBindings[l].keyCode == options.keyBindings[i1].keyCode) {
+				if (i1 != l && options.keyBindings[l].keyCode == options.keyBindings[i1].keyCode) {
 					flag = true;
 				}
 			}
@@ -72,10 +74,9 @@ public class GCF_GuiControls extends GuiControls {
 			int yy = 36 - (int) amountScrolled + 24 * (l >> 1);
 			GuiButton gb = (GuiButton) buttonList.get(j1);
 			if (buttonId == l) {
-				gb.displayString = "\247f> \247e??? \247f<";
+				gb.displayString = "" + EnumChatFormatting.WHITE + "> " + EnumChatFormatting.YELLOW + "??? " + EnumChatFormatting.WHITE + "<";
 			} else if (flag) {
-				gb.displayString = (new StringBuilder()).append("\247c")
-						.append(options.getOptionDisplayString(j1)).toString();
+				gb.displayString = EnumChatFormatting.RED + this.options.getOptionDisplayString(j1);
 			} else {
 				gb.displayString = options.getOptionDisplayString(j1);
 			}

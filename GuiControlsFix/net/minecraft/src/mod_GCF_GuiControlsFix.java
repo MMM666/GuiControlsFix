@@ -1,12 +1,11 @@
 package net.minecraft.src;
 
-import net.minecraft.client.Minecraft;
 
 public class mod_GCF_GuiControlsFix extends BaseMod {
 
 	@Override
 	public String getVersion() {
-		return "1.5.2-1";
+		return "1.6.1-1";
 	}
 
 	@Override
