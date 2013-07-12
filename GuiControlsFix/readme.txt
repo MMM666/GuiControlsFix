@@ -1,4 +1,4 @@
-Controls画面でホイールスクロールできるようにするMOD GuiControlsFix 1.5.2 Rev1
+Controls画面でホイールスクロールできるようにするMOD GuiControlsFix 1.6.2 Rev1
 
 
 キー設定画面ではみ出してボタンが押せない時用のMODです。
@@ -13,7 +13,7 @@ Controls画面でホイールスクロールできるようにするMOD GuiControlsFix 1.5.2 Rev1
 
 使い方
 	要Modloader。
-	%appdata%/.mincraft/modsにzipのまま放りこめば動くはずです。
+	%appdata%/.mincraft/versions/1.6.2ML/modsにzipのまま放りこめば動くはずです。
 
 
 効能
@@ -31,10 +31,11 @@ Controls画面でホイールスクロールできるようにするMOD GuiControlsFix 1.5.2 Rev1
 
 
 変更点
+	20130713.1	1.6.2 Rev1 バージョンアップ
+
+
+
 	20130507.1	1.5.2 Rev1 バージョンアップ
-
-
-
 	20130325.1	1.5.1 Rev1 バージョンアップ
 	20130116.1	1.4.7 Rev1 バージョンアップ
 	20122221.1	1.4.6 Rev1 バージョンアップ

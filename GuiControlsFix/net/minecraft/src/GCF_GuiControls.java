@@ -82,8 +82,8 @@ public class GCF_GuiControls extends GuiControls {
 			}
 			gb.yPosition = yy;
 			gb.drawButton(mc, i, j);
-			drawString(fontRenderer, options.getKeyBindingDescription(l), k
-					+ (l % 2) * 160 + 70 + 6, yy + 7, -1);
+			drawString(fontRenderer, options.getKeyBindingDescription(l),
+					k + (l % 2) * 160 + 70 + 6, yy + 7, -1);
 		}
 		// Done
 		((GuiButton) buttonList.get(buttonList.size() - 1)).drawButton(mc, i, j);
