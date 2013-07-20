@@ -5,7 +5,7 @@ public class mod_GCF_GuiControlsFix extends BaseMod {
 
 	@Override
 	public String getVersion() {
-		return "1.6.2-1";
+		return "1.6.2-2";
 	}
 
 	@Override

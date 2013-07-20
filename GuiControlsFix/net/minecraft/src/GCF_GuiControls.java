@@ -62,18 +62,18 @@ public class GCF_GuiControls extends GuiControls {
 		drawDefaultBackground();
 		drawCenteredString(fontRenderer, screenTitle, width / 2, 20, 0xffffff);
 		int k = getButtonPosition();
-		for (int l = 0; l < options.keyBindings.length; l++) {
+		for (int ll = 0; ll < options.keyBindings.length; ll++) {
 			boolean flag = false;
 			for (int i1 = 0; i1 < options.keyBindings.length; i1++) {
-				if (i1 != l && options.keyBindings[l].keyCode == options.keyBindings[i1].keyCode) {
+				if (i1 != ll && options.keyBindings[ll].keyCode == options.keyBindings[i1].keyCode) {
 					flag = true;
 				}
 			}
 			
-			int j1 = l;
-			int yy = 36 - (int) amountScrolled + 24 * (l >> 1);
+			int j1 = ll;
+			int yy = 36 - (int) amountScrolled + 24 * (ll >> 1);
 			GuiButton gb = (GuiButton) buttonList.get(j1);
-			if (buttonId == l) {
+			if (buttonId == ll) {
 				gb.displayString = "" + EnumChatFormatting.WHITE + "> " + EnumChatFormatting.YELLOW + "??? " + EnumChatFormatting.WHITE + "<";
 			} else if (flag) {
 				gb.displayString = EnumChatFormatting.RED + this.options.getOptionDisplayString(j1);
@@ -82,8 +82,11 @@ public class GCF_GuiControls extends GuiControls {
 			}
 			gb.yPosition = yy;
 			gb.drawButton(mc, i, j);
-			drawString(fontRenderer, options.getKeyBindingDescription(l),
-					k + (l % 2) * 160 + 70 + 6, yy + 7, -1);
+			drawString(fontRenderer, StatCollector.translateToLocal(options.getKeyBindingDescription(ll)),
+					k + (ll % 2) * 160 + 70 + 6, yy + 7, -1);
+			
+//			drawString(fontRenderer, options.getKeyBindingDescription(ll),
+//					k + (ll % 2) * 160 + 70 + 6, yy + 7, -1);
 		}
 		// Done
 		((GuiButton) buttonList.get(buttonList.size() - 1)).drawButton(mc, i, j);
